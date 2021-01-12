@@ -7,7 +7,7 @@ import {
   Card,
 } from "react-bootstrap";
 
-import BlogNavbar from '../components/BlogNavbar'
+import BlogNavbar from 'components/BlogNavbar'
 
 export default function Home() {
   return (
