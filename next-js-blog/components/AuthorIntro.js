@@ -16,8 +16,7 @@ const AuthorIntro = () => (
         <Media.Body>
           <h5 className="font-weight-bold mb-0">Hello,</h5>
           <p className="welcome-text">
-            My name is Pedro Pereira, logician and developer. I belive in
-            suckless open-source and functional software.
+            My name is Pedro Pereira, logician and developer. I belive in open-source, functional and suckless software.
           </p>
         </Media.Body>
       </Media>
