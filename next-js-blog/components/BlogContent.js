@@ -8,9 +8,20 @@ const serializers = {
         <HighlightCode language = {language}>
             {code}
             <div>className="code-filename"</div>
+            <p>{filename}</p>
         </HighlightCode>
       )
     }
+  },
+  image: ({node: {asset, alt}}) => {
+    return(
+      <div className="blog-image">
+        <img src={asset.url} />
+        <div className="image-alt">
+          {alt}
+        </div>
+      </div>
+    )
   }
 }
 
