@@ -6,9 +6,8 @@ const serializers = {
     code: ({node: {language, code, filename}}) => {
       return (
         <HighlightCode language = {language}>
-            {code}
-            <div>className="code-filename"</div>
-            <p>{filename}</p>
+            {code}            
+            <div className="code-filename">{filename}</div>
         </HighlightCode>
       )
     }
