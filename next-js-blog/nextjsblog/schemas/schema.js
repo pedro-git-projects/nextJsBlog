@@ -11,7 +11,6 @@ export default createSchema({
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
-    /* Your types here! */
     {
       name: 'author',
       type: 'document',
@@ -48,11 +47,14 @@ export default createSchema({
           name: 'coverImage',
           title: 'Cover Image',
           type: 'image',
+          options: {
+            hotspot: true
+          },
           fields: [
             {
               type: 'text',
               name: 'alt',
-              title: 'Description'            
+              title: 'Description'
             }
           ]
         },
@@ -68,6 +70,20 @@ export default createSchema({
               type: 'image',
               fields: [
                 {
+                  title: 'Position',
+                  name: 'position',
+                  type: 'string',
+                  options: {
+                    list: [
+                      {title: 'Center', value: 'center'},
+                      {title: 'Left', value: 'left'},
+                      {title: 'Right', value: 'right'},
+                    ],
+                    layout: 'radio',
+                    isHighlighted: true
+                  }
+                },
+                {
                   type: 'text',
                   name: 'alt',
                   title: 'Description',
@@ -82,8 +98,8 @@ export default createSchema({
             },
             {
               type: 'code',
-              options:{
-                withFilename:true
+              options: {
+                withFilename: true
               }
             }
           ]
